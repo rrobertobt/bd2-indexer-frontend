@@ -18,4 +18,8 @@ export interface Item {
     product_type: string;
     title:        string;
     score:        number;
+    currency:     string;
+    stock:        number;
+    rating:       number;
+    created_at:   string;
 }
