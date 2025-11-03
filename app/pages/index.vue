@@ -178,12 +178,13 @@
               }).format(item.price)
             }}
           </strong>
-          <Progress
-            :model-value="(item.rating / 5) * 100"
-            class="w-12 mt-1.5"
-            :max="100"
-            indicator-class="bg-green-500"
-          />
+          <Badge variant="secondary" class="mt-1">
+            <Icon
+              name="lucide:star"
+              class="size-4 inline-block mr-1 text-yellow-400"
+            />
+            <strong>{{ item.rating }}</strong> / 5
+          </Badge>
         </CardContent>
       </Card>
     </section>
@@ -192,6 +193,7 @@
 <script setup lang="ts">
   import { Input } from "@/components/ui/input";
   import { Search } from "lucide-vue-next";
+  import { Badge } from "~/components/ui/badge";
   import { Button } from "~/components/ui/button";
   import {
     Card,
@@ -200,7 +202,6 @@
     CardDescription,
     CardContent,
   } from "~/components/ui/card";
-  import { Progress } from "~/components/ui/progress";
   import {
     Select,
     SelectContent,
