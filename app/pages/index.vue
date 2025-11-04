@@ -164,20 +164,22 @@
           <CardDescription>{{ item.description }}</CardDescription>
         </CardHeader>
         <CardContent class="h-full flex flex-col justify-between">
-          <p class="text-sm">
-            <strong>Marca:</strong> {{ item.brand }} ⋅
-            <strong>Categoría:</strong> {{ item.category }} ⋅
-            <strong>SKU:</strong> {{ item.sku }} ⋅ <strong>Tipo:</strong>
-            {{ item.product_type }}
-          </p>
-          <strong class="text-2xl">
-            {{
-              Intl.NumberFormat("es-GT", {
-                style: "currency",
-                currency: item.currency || "GTQ",
-              }).format(item.price)
-            }}
-          </strong>
+          <div>
+            <Badge class="font-mono mb-1.5" variant="outline">{{ item.sku }}</Badge>
+            <p class="text-sm">
+              <strong>Marca:</strong> {{ item.brand }} ⋅
+              <strong>Categoría:</strong> {{ item.category }} ⋅
+              <strong>Tipo:</strong> {{ item.product_type }}
+            </p>
+            <strong class="text-2xl">
+              {{
+                Intl.NumberFormat("es-GT", {
+                  style: "currency",
+                  currency: item.currency || "GTQ",
+                }).format(item.price)
+              }}
+            </strong>
+          </div>
           <Badge variant="secondary" class="mt-1">
             <Icon
               name="lucide:star"

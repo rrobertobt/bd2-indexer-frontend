@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       weights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
     families: [
-      { name: "Barlow", provider: "google" },
+      { name: "Google Sans Code", provider: "google" },
       { name: "Plus Jakarta Sans", provider: "google" },
     ],
     experimental: {
